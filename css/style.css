@@ -103,7 +103,7 @@ a {
   margin: 5% auto 0px auto;
 }
 
-.answersBlock {
+.answersDiv {
   position: relative;
   height: 40%;
   width: 80%;
@@ -142,4 +142,12 @@ a {
   height: 8%;
   width: 90%;
   margin: 3.5% auto;
+}
+
+/* Interactive */
+
+.currentScore {
+  background-color: #f7c602;
+  color: black;
+  font-weight: bold;
 }
