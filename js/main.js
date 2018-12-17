@@ -60,14 +60,17 @@ var questions = [
   }
 ]
 
-// Show Questions and Answers
+// Global Variables
 
 var questionNumber = 0;
-var loss = "";
-var answerBlock = document.getElementsByClassName("answer");
+var questionBlock = document.getElementsByClassName("questionText");
+var answerBlock = document.getElementsByClassName("answerText");
+var money = document.getElementsByClassName("money");
+var reset = document.getElementsByClassName("reset");
+
+// Show Questions and Answers
 
 function showQuestions () {
-  var questionBlock = document.getElementsByClassName("question");
     for (var i = 0; i < questionBlock.length; i++) {
       questionBlock[0].innerHTML = questions[questionNumber].question;
     }
@@ -76,7 +79,6 @@ function showQuestions () {
     }
   }
 showQuestions (questions);
-
 
 // Check if Correct
 
@@ -89,30 +91,57 @@ function answerClick() {
     questionNumber = questionNumber + 1;
     showQuestions (questions)
     alert("Correct")
+    winCheck ()
   }
   else {
     lossCheck()
   }
-  console.log(loss)
-  var money = document.getElementsByClassName("money");
-  console.log(money)
-  for (var i = 0; i < money.length; i++) {
-      money[10-questionNumber].classList.add("currentScore");
-  }
+  scoreIncrease ()
 }
 
 // ScoreIncrease
 
-
+function scoreIncrease() {
+  for (var i = 0; i < money.length; i++) {
+    money[10-questionNumber].classList.add("currentScore");
+  }
+}
 
 // Check Loss
 
 function lossCheck() {
-    alert("You lose")
-    questionNumber = 0
-    showQuestions (questions)
+  alert("You lose. Press okay to restart game.")
+  questionNumber = 0
+  showQuestions (questions)
+  for (var i = 0; i < money.length; i++) {
+    money[i].classList.remove("currentScore");
   }
+  for (var i = 0; i < questionBlock.length; i++) {
+    questionBlock.innerHTML = "YOU LOSE"
+  }
+}
 
+// Check Win
+
+function winCheck() {
+  if (questionNumber == 10) {
+    alert("You win")
+  }
+}
+
+// Reset Game
+
+for (var i = 0; i < reset.length; i++) {
+  reset[i].addEventListener("click", restartGame)
+}
+
+function restartGame() {
+  questionNumber = 0
+  showQuestions (questions)
+  for (var i = 0; i < money.length-1; i++) {
+    money[i].classList.remove("currentScore");
+  }
+}
 
 
 });

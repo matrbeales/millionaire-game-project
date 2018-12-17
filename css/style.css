@@ -120,6 +120,11 @@ a {
 
 .answer p {
   padding: 10px;
+  height: 65px;
+}
+
+.question p {
+  padding: 30px;
 }
 
 .letter {
@@ -150,4 +155,14 @@ a {
   background-color: #f7c602;
   color: black;
   font-weight: bold;
+}
+
+.button:hover {
+  background-color: #f7c602;
+  color: black;
+}
+
+.button:active {
+  font-weight: bold;
+  box-shadow: 10px -10px 5px #040f2b;
 }
