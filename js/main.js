@@ -60,8 +60,10 @@ var questions = [
   }
 ]
 
+// Show Questions and Answers
 
 var questionNumber = 0;
+var loss = "";
 var answerBlock = document.getElementsByClassName("answer");
 
 function showQuestions () {
@@ -76,6 +78,7 @@ function showQuestions () {
 showQuestions (questions);
 
 
+// Check if Correct
 
 for (var i = 0; i < answerBlock.length; i++) {
   answerBlock[i].addEventListener("click", answerClick)
@@ -85,16 +88,30 @@ function answerClick() {
   if (this.innerHTML == questions[questionNumber].correctAnswer) {
     questionNumber = questionNumber + 1;
     showQuestions (questions)
+    alert("Correct")
   }
   else {
-    console.log("incorrect")
+    lossCheck()
+  }
+  console.log(loss)
+  var money = document.getElementsByClassName("money");
+  console.log(money)
+  for (var i = 0; i < money.length; i++) {
+      money[10-questionNumber].classList.add("currentScore");
   }
 }
 
+// ScoreIncrease
 
 
 
+// Check Loss
 
+function lossCheck() {
+    alert("You lose")
+    questionNumber = 0
+    showQuestions (questions)
+  }
 
 
 
