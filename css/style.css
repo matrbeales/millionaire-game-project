@@ -73,17 +73,20 @@ a {
 .reset {
   position: relative;
   height: 10%;
-  width: 90%;
+  width: 95%;
   margin: 10% auto 0px auto;
 }
 
 .instructions {
   position: relative;
   height: 10%;
-  width: 90%;
+  width: 95%;
   margin: 10% auto 0px auto;
 }
 
+.lifelineDiv {
+
+}
 /* Middle */
 
 .center {
@@ -125,10 +128,6 @@ a {
 
 .question p {
   padding: 30px;
-}
-
-.letter {
-  color: gold;
 }
 
 /* Right */
