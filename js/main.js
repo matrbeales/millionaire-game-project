@@ -26,6 +26,7 @@ var reset = document.getElementsByClassName("reset");
 var answersDiv = document.getElementById("answersDiv");
 var questionsDiv = document.getElementById("questionSquare");
 var fifty = document.getElementById("fifty");
+var phoneFriend = document.getElementById("phoneFriend");
 
 // Show Questions and Answers
 
@@ -118,11 +119,12 @@ function restartGame() {
 }
 
 // 50/50
-var answerText = document.getElementsByClassName("answerText")
 
-fifty.addEventListener("click", fiftyClick)
+var answerText = document.getElementsByClassName("answerText");
+
+fifty.addEventListener("click", fiftyClick);
 function fiftyClick() {
-  var incorrectAnswerArray = questionArray[questionNumber].incorrect_answers
+  var incorrectAnswerArray = questionArray[questionNumber].incorrect_answers;
   var incorrectOptions = [];
   for (var i = 0; i < (answerText.length); i++) {
     if (incorrectAnswerArray.includes(answerText[i].innerHTML)) {
@@ -133,7 +135,26 @@ function fiftyClick() {
   for (var i = 0; i < incorrectOptions.length; i += 2) {
     incorrectOptions[i].innerHTML = "_";
   }
-  fifty.removeEventListener("click", fiftyClick)
+  fifty.removeEventListener("click", fiftyClick);
+  fifty.classList.add("usedLifeline");
+  fifty.classList.remove("button");
+}
+
+// Phone a Friend
+var answerBox = document.getElementsByClassName("answer");
+
+phoneFriend.addEventListener("click", phoneFriendClick);
+
+function phoneFriendClick () {
+  for (var i = 0; i < answerArray.length; i++) {
+    if (answerBlock[i].innerHTML == questionArray[questionNumber].correct_answer) {
+      answerBox[i].classList.add("phoneFriend");
+    }
+  }
+  phoneFriend.removeEventListener("click", phoneFriendClick);
+  phoneFriend.classList.add("usedLifeline");
+  phoneFriend.classList.remove("button");
+
 }
 
 

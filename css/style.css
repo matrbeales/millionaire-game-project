@@ -195,5 +195,10 @@ a {
 }
 
 .usedLifeline {
-  opacity: 20%;
+  opacity: 0.5;
+}
+
+.phoneFriend {
+  background-color: darkgreen;
+  font-weight: bold
 }
