@@ -1,0 +1,164 @@
+/* Global */
+
+main {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(https://images8.alphacoders.com/670/thumb-1920-670413.jpg);
+  background-size: cover;
+  background-position: -30px;
+  color: white;
+  font-family: arial;
+}
+
+.square {
+  background-color: black;
+  border: gold solid 1px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 5px #040f2b;
+}
+
+.circle {
+  background-color: black;
+  border: gold solid 1px;
+  border-radius: 50%;
+  box-shadow: 5px -5px 5px #040f2b;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Instructions Page */
+
+.mainMenu {
+  position: relative;
+  height: 50%;
+  width: 70%;
+  margin: 5% auto 0px auto;
+  padding: 20px;
+}
+
+.startButton {
+  position: relative;
+  height: 10%;
+  width: 15%;
+  margin: 5% auto 0px auto;
+  text-align: center;
+}
+
+/* Questions Page */
+
+.container{
+  position: relative;
+  height: 98%;
+  width: 98%;
+  margin: 1%;
+  text-align: center;
+}
+
+/* Left */
+
+.leftBar {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 90%;
+  width: 10%;
+  margin: 0px 0px 0px 3%;
+}
+
+.reset {
+  position: relative;
+  height: 10%;
+  width: 95%;
+  margin: 10% auto 0px auto;
+}
+
+.instructions {
+  position: relative;
+  height: 10%;
+  width: 95%;
+  margin: 10% auto 0px auto;
+}
+
+/* Middle */
+
+.center {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 90%;
+  width: 67%;
+  margin: 0px 3% 0px 3%;
+  font-size: 25px;
+}
+
+.question {
+  position: relative;
+  height: 30%;
+  width: 77%;
+  margin: 5% auto 0px auto;
+}
+
+.answersDiv {
+  position: relative;
+  height: 40%;
+  width: 80%;
+  margin: 10% auto 0px auto;
+}
+
+.answer {
+  position: relative;
+  display: inline-block;
+  height: 40%;
+  width: 45%;
+  margin: 2%;
+}
+
+.answer p {
+  padding: 10px;
+  height: 65px;
+}
+
+.question p {
+  padding: 30px;
+}
+
+/* Right */
+
+.rightBar {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 90%;
+  width: 10%;
+  margin-right: 3%
+}
+
+.money {
+  border: relative;
+  height: 8%;
+  width: 90%;
+  margin: 3.5% auto;
+}
+
+/* Interactive */
+
+.currentScore {
+  background-color: #f7c602;
+  color: black;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #f7c602;
+  color: black;
+}
+
+.button:active {
+  font-weight: bold;
+  box-shadow: 10px -10px 5px #040f2b;
+}
