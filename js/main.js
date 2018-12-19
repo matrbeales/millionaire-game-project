@@ -68,16 +68,13 @@ const url = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple
 fetch(url)
   .then((resp) => resp.json())
   .then(function(data){
-    console.log(data.results)
     questions = data.results
-    questionArray = questions
+    questionArray = questions.concat({correct_answer: "", incorrect_answers:["", "", ""], question: "You Win!"})
     showQuestions (questionArray);
   })
   .catch(function(error) {
     console.error(error);
   });
-
-
 
 // Global Variables
 
@@ -89,7 +86,6 @@ var reset = document.getElementsByClassName("reset");
 
 // Show Questions and Answers
 
-var answerArray =[]
 
 function showQuestions () {
     for (var i = 0; i < questionBlock.length; i++) {
@@ -106,11 +102,9 @@ function showQuestions () {
         answerArray[j] = x;
     }
     return answerArray;
-    console.log(answerArray)
 }
     for (var i = 0; i < answerBlock.length; i++) {
       answerBlock[i].innerHTML = answerArray[i]
-
     }
 }
 
@@ -150,17 +144,15 @@ function lossCheck() {
   for (var i = 0; i < money.length; i++) {
     money[i].classList.remove("currentScore");
   }
-  for (var i = 0; i < questionBlock.length; i++) {
-    questionBlock.innerHTML = "YOU LOSE"
-  }
 }
 
 // Check Win
 
 function winCheck() {
-  if (questionNumber == 9) {
+  if (questionNumber == 10) {
     alert("You win")
-  }}
+  }
+}
 
 // Reset Game
 
