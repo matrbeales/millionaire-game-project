@@ -63,6 +63,9 @@ function answerClick() {
     questionNumber = questionNumber + 1;
     showQuestions (questions)
     winCheck ()
+    var correctAnswerSound = new Audio("sounds/correctanswer.mp3");
+    correctAnswerSound.play();
+
   }
   else {
     lossCheck()
@@ -92,6 +95,8 @@ function lossCheck() {
   for (var i = 0; i < money.length; i++) {
     money[i].classList.remove("currentScore");
   }
+  var wrongAnswerSound = new Audio("sounds/wronganswer.mp3");
+  wrongAnswerSound.play();
 }
 
 // Check Win
@@ -141,6 +146,7 @@ function fiftyClick() {
 }
 
 // Phone a Friend
+
 var answerBox = document.getElementsByClassName("answer");
 
 phoneFriend.addEventListener("click", phoneFriendClick);
@@ -155,6 +161,18 @@ function phoneFriendClick () {
   phoneFriend.classList.add("usedLifeline");
   phoneFriend.classList.remove("button");
 
+}
+
+// Remove Phone a Friend Class
+
+for (var i = 0; i < answerBlock.length; i++) {
+  answerBlock[i].addEventListener("click", removePhoneFriendClass)
+}
+
+function removePhoneFriendClass () {
+  for (var i = 0; i < answerBox.length; i++) {
+    answerBox[i].classList.remove("phoneFriend")
+  }
 }
 
 

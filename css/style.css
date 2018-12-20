@@ -49,6 +49,14 @@ a {
   text-align: center;
 }
 
+.mainMenu h1 {
+  font-size: 300%;
+}
+
+.mainMenu h2 {
+  font-size: 200%;
+}
+
 /* Questions Page */
 
 .container{
