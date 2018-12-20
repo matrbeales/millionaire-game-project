@@ -8,13 +8,14 @@ var url = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple"
 fetch(url)
   .then((resp) => resp.json())
   .then(function(data){
-    questions = data.results
-    questionArray = questions.concat({correct_answer: "", incorrect_answers:["", "", ""], question: "You Win!"})
-    showQuestions (questionArray);
+    questions = data.results;
+    questionArray = questions;
+    showQuestions ();
   })
   .catch(function(error) {
-    console.error(error);
   });
+
+
 
 // Global Variables
 
@@ -174,6 +175,5 @@ function removePhoneFriendClass () {
     answerBox[i].classList.remove("phoneFriend")
   }
 }
-
 
 });
