@@ -6,7 +6,7 @@ I was tasked with creating a game using HTML, CSS and Javascript. I decided to m
 
 ## Where to play
 
-[link](Click here to play)
+[Click here to play](https://matrbeales.github.io/millionaire-game-project/)
 
 ## Instructions
 
