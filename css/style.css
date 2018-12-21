@@ -4,7 +4,7 @@ main {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: url(https://images8.alphacoders.com/670/thumb-1920-670413.jpg);
+  background-image: url(../images/thumb-1920-670413.jpg);
   background-size: cover;
   background-position: -30px;
   color: white;
@@ -49,6 +49,14 @@ a {
   text-align: center;
 }
 
+.mainMenu h1 {
+  font-size: 300%;
+}
+
+.mainMenu h2 {
+  font-size: 200%;
+}
+
 /* Questions Page */
 
 .container{
@@ -84,6 +92,26 @@ a {
   margin: 10% auto 0px auto;
 }
 
+.lifelinesDiv {
+  position: relative;
+  margin-top: 80px;
+}
+
+.lifeline {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin-top: 20px;
+  font-size: 25px
+}
+
+#fifty p {
+  padding-top: 20px;
+}
+
+#phoneFriend p {
+  padding-top: 10px;
+}
 /* Middle */
 
 .center {
@@ -99,14 +127,14 @@ a {
 .question {
   position: relative;
   height: 30%;
-  width: 77%;
+  width: 93%;
   margin: 5% auto 0px auto;
 }
 
 .answersDiv {
   position: relative;
   height: 40%;
-  width: 80%;
+  width: 99%;
   margin: 10% auto 0px auto;
 }
 
@@ -120,7 +148,8 @@ a {
 
 .answer p {
   padding: 10px;
-  height: 65px;
+  height: 55px;
+  font-size: 22px;
 }
 
 .question p {
@@ -156,9 +185,30 @@ a {
 .button:hover {
   background-color: #f7c602;
   color: black;
+  cursor: pointer;
 }
 
 .button:active {
   font-weight: bold;
   box-shadow: 10px -10px 5px #040f2b;
+}
+
+.losswin {
+  height: 80%;
+  width: 99%;
+  font-size: 40px;
+}
+
+.fiftyFifty {
+  color: black;
+}
+
+.usedLifeline {
+  opacity: 0.5;
+}
+
+.phoneFriend {
+  background-color: green;
+  color: black;
+  font-weight: bold
 }
